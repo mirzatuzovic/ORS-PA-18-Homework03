@@ -17,6 +17,15 @@
 
 def sum_digits(number):
 
+    if not isinstance(number,int):
+        return -1
+
+    sum = 0
+
+    for i in str(abs(number)):
+        sum += int(i)
+    return sum
+
 
 
 
