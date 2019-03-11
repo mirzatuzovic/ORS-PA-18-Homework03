@@ -24,6 +24,23 @@
 
 def valid_mobile_number(phone_number):
 
+    if not isinstance(phone_number,str):
+        return False
+
+    if not phone_number.isnumeric():
+        return False
+
+    if not len(phone_number) in [9,10]:
+        return False
+
+    if not phone_number.startswith("06"):
+        return False
+
+    if phone_number[2] not in ['3','6','7','8','9']:
+        return False
+    return True
+
+
 
 
 
